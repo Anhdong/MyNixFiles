@@ -8,11 +8,6 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    
-    silentSDDM = {
-      url = "github:uiriansan/SilentSDDM";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs = { self, nixpkgs, ... }@inputs: {
@@ -26,10 +21,7 @@
         ./configuration.nix
         
 	inputs.home-manager.nixosModules.default
-	
-	inputs.silentSDDM.nixosModules.default
       ];
     };
   };
 }
-

@@ -2,10 +2,13 @@
 
 {
   imports = [ 
-      # Include the results of the hardware scan.
       ./hardware-configuration.nix
+
       inputs.home-manager.nixosModules.default
-      ./modules/nixos/audio.nix
+ 
+     ./modules/nixos/audio.nix
+      ./modules/nixos/network.nix
+      ./modules/nixos/sddm.nix
       ./modules/nixos/timezone_locale.nix
     ];
 
@@ -16,11 +19,6 @@
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
-  networking.hostName = "nixos"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
-  # Enable networking
-  networking.networkmanager.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -52,13 +50,7 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  # SDDM
-  programs.silentSDDM = {
-    enable = true;
-    theme = "default";
-  };
-
-  # Add niri compositor & serpantinum
+  # Add niri compositor
   programs.niri.enable = true;
   
   # List packages installed in system profile.
@@ -69,7 +61,7 @@
     fish
     starship
     vim
-    alacritty
+    kitty
     git
     firefox
   
