@@ -8,6 +8,11 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    
+    helium-flake = {
+      url = "github:oxcl/nix-flake-helium-browser";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { self, nixpkgs, ... }@inputs: {
@@ -21,6 +26,8 @@
         ./configuration.nix
         
 	inputs.home-manager.nixosModules.default
+      
+        inputs.helium-flake.nixosModules.default
       ];
     };
   };

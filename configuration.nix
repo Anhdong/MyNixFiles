@@ -6,11 +6,12 @@
 
       inputs.home-manager.nixosModules.default
  
-     ./modules/nixos/audio.nix
+      ./modules/nixos/audio.nix
       ./modules/nixos/network.nix
       ./modules/nixos/sddm.nix
       ./modules/nixos/timezone_locale.nix
-    ];
+      
+  ];
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
@@ -63,12 +64,14 @@
     vim
     kitty
     git
-    firefox
   
   ];
 
   # Hardware graphics
   hardware.graphics.enable = true;
+
+  # XWAYLAND
+  programs.xwayland.enable = true;
 
   # DO NOT REMOVE THIS! This is the version you install NixOS
   system.stateVersion = "26.05"; # Did you read the comment?

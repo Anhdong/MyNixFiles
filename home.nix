@@ -3,6 +3,7 @@
 {
   imports = [
     ./modules/home/fonts.nix
+    ./modules/home/helium.nix
   ];  
 
   home.username = "anhdong";
