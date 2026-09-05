@@ -1,14 +1,18 @@
 { config, pkgs, ... }:
 
 {
+  imports = [
+    ./modules/home/fonts.nix
+  ];  
+
   home.username = "anhdong";
   home.homeDirectory = "/home/anhdong";
 
   # Do not change this! It a compatible version
   home.stateVersion = "26.05"; 
 
-  home.packages = [
-    pkgs.yazi
+  home.packages = with pkgs; [
+    yazi
   ];
 
   home.file = {
