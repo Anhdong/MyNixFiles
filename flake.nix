@@ -1,16 +1,33 @@
 {
+  description = "Anhdong's Nixos config flake";
+
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    serpantinum.url = "github:ilyamiro/serpantinum";
+    
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    
+    silentSDDM = {
+      url = "github:uiriansan/SilentSDDM";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, serpantinum, ... }: {
+  outputs = { self, nixpkgs, ... }@inputs: {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
-      specialArgs = { inherit serpantinum; };
+      specialArgs = { 
+	inherit inputs;
+      };
+      
       modules = [
         ./configuration.nix
-        serpantinum.nixosModules.default
+        
+	inputs.home-manager.nixosModules.default
+	
+	inputs.silentSDDM.nixosModules.default
       ];
     };
   };

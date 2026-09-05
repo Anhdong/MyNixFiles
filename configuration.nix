@@ -1,9 +1,12 @@
-{ config, pkgs, serpantinum, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
+  imports = [ 
+      # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      inputs.home-manager.nixosModules.default
+      ./modules/nixos/audio.nix
+      ./modules/nixos/timezone_locale.nix
     ];
 
   # Use the systemd-boot EFI boot loader.
@@ -18,24 +21,6 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
-
-  # Set your time zone.
-  time.timeZone = "Asia/Ho_Chi_Minh";
-
-  # Select internationalisation properties.
-  i18n.defaultLocale = "en_US.UTF-8";
-
-  i18n.extraLocaleSettings = {
-    LC_ADDRESS = "vi_VN";
-    LC_IDENTIFICATION = "vi_VN";
-    LC_MEASUREMENT = "vi_VN";
-    LC_MONETARY = "vi_VN";
-    LC_NAME = "vi_VN";
-    LC_NUMERIC = "vi_VN";
-    LC_PAPER = "vi_VN";
-    LC_TELEPHONE = "vi_VN";
-    LC_TIME = "vi_VN";
-  };
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -57,23 +42,37 @@
     "flakes"
   ];
 
+  home-manager = {
+    extraSpecialArgs = { inherit inputs; };
+    users = {
+      "anhdong" = import ./home.nix;
+    };
+  };
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+  # SDDM
+  programs.silentSDDM = {
+    enable = true;
+    theme = "default";
+  };
+
   # Add niri compositor & serpantinum
   programs.niri.enable = true;
-  programs.serpantinum.enable = true;
   
   # List packages installed in system profile.
   environment.systemPackages = with pkgs; [
+    waybar
+    rofi
+    swaynotificationcenter   
     fish
     starship
     vim
-    kitty
+    alacritty
     git
     firefox
   
-    (serpantinum.packages.${pkgs.stdenv.hostPlatform.system}.default)
   ];
 
   # Hardware graphics
