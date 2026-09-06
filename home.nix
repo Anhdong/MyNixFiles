@@ -6,6 +6,7 @@
     ./modules/home/helium.nix
     ./modules/home/mako.nix
     ./modules/home/dev.nix
+    ./modules/home/tui.nix
   ];  
 
   home.username = "anhdong";
@@ -15,7 +16,6 @@
   home.stateVersion = "26.05"; 
 
   home.packages = with pkgs; [
-    yazi
   ];
 
   home.file = {
