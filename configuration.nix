@@ -1,17 +1,21 @@
 { config, pkgs, inputs, ... }:
 
 {
-  imports = [ 
+  imports =
+    [
       ./hardware-configuration.nix
+    ]
+    ++ (
+      let
+        dir = ./modules/nixos;
+      in
+        map
+          (name: dir + "/${name}")
+          (builtins.filter
+            (name: builtins.match ".*\\.nix" name != null)
+            (builtins.attrNames (builtins.readDir dir)))
+    );
 
-      inputs.home-manager.nixosModules.default
- 
-      ./modules/nixos/audio.nix
-      ./modules/nixos/network.nix
-      ./modules/nixos/sddm.nix
-      ./modules/nixos/timezone_locale.nix
-      
-  ];
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;

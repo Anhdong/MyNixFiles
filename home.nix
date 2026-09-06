@@ -1,15 +1,18 @@
 { config, pkgs, ... }:
 
 {
-  imports = [
-    ./modules/home/desktop.nix
-    ./modules/home/fonts.nix
-    ./modules/home/helium.nix
-    ./modules/home/mako.nix
-    ./modules/home/dev.nix
-    ./modules/home/tui.nix
-  ];  
+  #Scan home modules and import
+  imports =
+    let
+      dir = ./modules/home;
+    in
+      map
+        (name: dir + "/${name}")
+        (builtins.filter
+          (name: builtins.match ".*\\.nix" name != null)
+          (builtins.attrNames (builtins.readDir dir)));
 
+  #User
   home.username = "anhdong";
   home.homeDirectory = "/home/anhdong";
 
