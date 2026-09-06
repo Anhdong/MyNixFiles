@@ -58,7 +58,6 @@
   environment.systemPackages = with pkgs; [
     waybar
     rofi
-    swaynotificationcenter   
     fish
     starship
     vim

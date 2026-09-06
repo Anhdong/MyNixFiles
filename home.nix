@@ -4,6 +4,7 @@
   imports = [
     ./modules/home/fonts.nix
     ./modules/home/helium.nix
+    ./modules/home/mako.nix
   ];  
 
   home.username = "anhdong";
