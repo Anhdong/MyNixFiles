@@ -65,7 +65,6 @@
     vim
     kitty
     git
-  
   ];
 
   # Hardware graphics
