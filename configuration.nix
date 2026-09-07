@@ -60,11 +60,6 @@
   
   # List packages installed in system profile.
   environment.systemPackages = with pkgs; [
-    fish
-    starship
-    vim
-    kitty
-    git
   ];
 
   # Hardware graphics

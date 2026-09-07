@@ -1,8 +1,12 @@
 { pkgs, ... }:
 {
   home.packages = with pkgs; [
-    gh
+    foot
+    vim
     neovim
+    starfish
+    git
+    gh
     vscodium
   ];
 
