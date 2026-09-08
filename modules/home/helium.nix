@@ -9,7 +9,6 @@
     enable = true;
 
     flags = [
-      "--disable-gpu"
       "--ozone-platform-hint=auto"
     ];
 
@@ -17,8 +16,7 @@
       "BrowserSignin" = 0;
       "PasswordManagerEnabled" = false;
       "SyncDisabled" = true;
-      "SpellcheckEnabled" = true;
-      "SpellcheckLanguage" = [ "en-US" ];
+      "SpellcheckEnabled" = false;
     };
   };
 }
