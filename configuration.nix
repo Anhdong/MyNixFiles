@@ -45,6 +45,10 @@
     "flakes"
   ];
 
+  #Window Manager
+  programs.mangowc.enable = true;
+ 
+  # Home Manager
   home-manager = {
     extraSpecialArgs = { inherit inputs; };
     users = {
@@ -55,8 +59,6 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  # Add niri compositor
-  programs.niri.enable = true;
   
   # List packages installed in system profile.
   environment.systemPackages = with pkgs; [
