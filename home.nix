@@ -7,7 +7,6 @@
     ./modules/home/dev.nix
     ./modules/home/fonts.nix
     ./modules/home/helium.nix
-    ./modules/home/mako.nix
     ./modules/home/tui.nix
   ];
   #User

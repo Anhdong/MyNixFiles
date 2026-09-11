@@ -12,6 +12,8 @@
     playerctl
     cliphist
 
+    starship
+    blesh
     lazygit
     eza
     zoxide

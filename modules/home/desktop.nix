@@ -3,6 +3,8 @@
   home.packages = with pkgs; [
     waybar
     fuzzel
+    mako
+    libnotify
     wlsunset
     swaybg
     swaylock

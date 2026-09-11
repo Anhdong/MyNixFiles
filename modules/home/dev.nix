@@ -4,7 +4,6 @@
     foot
     vim
     neovim
-    starship
     git
     gh
     vscodium
