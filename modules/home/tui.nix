@@ -12,10 +12,9 @@
     playerctl
     cliphist
 
-    starship
-    blesh
     lazygit
     eza
+    bat
     zoxide
 
   ];
