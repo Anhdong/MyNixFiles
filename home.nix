@@ -8,6 +8,7 @@
     ./modules/home/fonts.nix
     ./modules/home/helium.nix
     ./modules/home/tui.nix
+    ./modules/home/bash.nix
   ];
   #User
   home.username = "anhdong";
