@@ -19,6 +19,9 @@
 
       cat = "bat";
 
+      nv = "nvim";
+      y = "yazi";
+
       nswitch = "sudo nixos-rebuild switch --flake";
       ntest = "sudo nixos-rebuild test --flake";
 
