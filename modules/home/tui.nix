@@ -6,7 +6,7 @@
     yazi
     
     impala
-    bluetuith
+    bluetui
     pulsemixer
     brightnessctl
     playerctl
