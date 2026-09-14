@@ -9,6 +9,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     
+    mangobar.url = "github:mangowm/mangobar";
+
     helium-flake = {
       url = "github:oxcl/nix-flake-helium-browser";
       inputs.nixpkgs.follows = "nixpkgs";

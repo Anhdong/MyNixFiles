@@ -1,7 +1,10 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 {
+  imports = [ inputs.mangobar.homeManagerModules.default ];
+
+
   home.packages = with pkgs; [
-    waybar
+    inputs.mangobar.packages.${pkgs.system}.mangobar
     fuzzel
     mako
     libnotify

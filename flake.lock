@@ -41,7 +41,41 @@
         "type": "github"
       }
     },
+    "mangobar": {
+      "inputs": {
+        "nixpkgs": "nixpkgs"
+      },
+      "locked": {
+        "lastModified": 1789039568,
+        "narHash": "sha256-wzQELB0I3YGcSAM7YE4qkbg241lWOkr299GFQSDVQIE=",
+        "owner": "mangowm",
+        "repo": "mangobar",
+        "rev": "55ebf575075ce3497177b68d58af89143da2bc65",
+        "type": "github"
+      },
+      "original": {
+        "owner": "mangowm",
+        "repo": "mangobar",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
+      "locked": {
+        "lastModified": 1786599213,
+        "narHash": "sha256-yNJd40f11EzXBjSByCB7IPpeFFAdeoSKKM67dGkfFoU=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "0e251e24a4f24e036a084b6b4b2d2491af4167f4",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_2": {
       "locked": {
         "lastModified": 1789009968,
         "narHash": "sha256-GB16oaxpsrnGNnGIE+0uYBqMRzB9X6FYDUvjvnJAYew=",
@@ -61,7 +95,8 @@
       "inputs": {
         "helium-flake": "helium-flake",
         "home-manager": "home-manager",
-        "nixpkgs": "nixpkgs"
+        "mangobar": "mangobar",
+        "nixpkgs": "nixpkgs_2"
       }
     }
   },
