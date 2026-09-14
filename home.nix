@@ -9,6 +9,7 @@
     ./modules/home/helium.nix
     ./modules/home/tui.nix
     ./modules/home/bash.nix
+    ./modules/home/media.nix
   ];
   #User
   home.username = "anhdong";
