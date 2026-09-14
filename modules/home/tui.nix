@@ -10,7 +10,6 @@
     pulsemixer
     brightnessctl
     playerctl
-    cliphist
 
     lazygit
     eza

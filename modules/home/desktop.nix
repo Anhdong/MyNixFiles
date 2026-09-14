@@ -13,6 +13,9 @@
     swaylock
     swayidle
 
+    wl-clipboard
+    cliphist
+
     imv
     mpv
     zathura
