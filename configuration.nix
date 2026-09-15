@@ -37,7 +37,10 @@
 
   #Window Manager
   programs.mangowc.enable = true;
- 
+
+  #D-Bus service
+  programs.dconf.enable = true;
+
   # Home Manager
   home-manager = {
     extraSpecialArgs = { inherit inputs; };
