@@ -3,13 +3,7 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ./modules/nixos/audio.nix
-    ./modules/nixos/keyboard.nix
-    ./modules/nixos/network.nix
-    ./modules/nixos/bluetooth.nix
-    ./modules/nixos/power.nix
-    ./modules/nixos/sddm.nix
-    ./modules/nixos/timezone_locale.nix
+    ./modules/nixos
     ];
 
   # Use the systemd-boot EFI boot loader.

@@ -1,16 +1,10 @@
 { config, pkgs, ... }:
 
 {
-  #Scan home modules and import
   imports = [
-    ./modules/home/desktop.nix
-    ./modules/home/dev.nix
-    ./modules/home/fonts.nix
-    ./modules/home/helium.nix
-    ./modules/home/tui.nix
-    ./modules/home/bash.nix
-    ./modules/home/media.nix
+    ./modules/home
   ];
+
   #User
   home.username = "anhdong";
   home.homeDirectory = "/home/anhdong";
