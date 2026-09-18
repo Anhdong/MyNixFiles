@@ -1,13 +1,6 @@
 {pkgs, ... }:
 
 {
-  home.packages = with pkgs; [
-    noto-fonts
-    noto-fonts-cjk-sans
-    noto-fonts-cjk-serif
-    noto-fonts-color-emoji
-    nerd-fonts.jetbrains-mono
-  ];
 
   fonts.fontconfig = {
     enable = true;
@@ -19,4 +12,14 @@
       emoji = [ "Noto Color Emoji" ];
     };
   };
+
+  home.packages = with pkgs; [
+    noto-fonts
+    noto-fonts-cjk-sans
+    noto-fonts-cjk-serif
+    noto-fonts-color-emoji
+    
+    jetbrains-mono
+    nerd-fonts.jetbrains-mono
+  ];
 }
