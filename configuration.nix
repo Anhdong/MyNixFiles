@@ -36,7 +36,7 @@
   ];
 
   #Window Manager
-  programs.mangowc.enable = true;
+  programs.mango.enable = true;
 
   #D-Bus service
   programs.dconf.enable = true;
