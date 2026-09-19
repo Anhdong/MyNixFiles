@@ -1,0 +1,54 @@
+// mangobar config (JSONC).
+{
+    "layer": "top",
+    "height": 16,
+    "buffer-scale": 1,
+    // "scroll-interval": 100,
+    // "smooth-scrolling-threshold": 5.0,
+
+    "modules-left": [
+        "workspaces"
+    ],
+    "modules-center": [
+	"clock"
+    ],
+    "modules-right": [
+	"battery"
+    ],
+
+    "workspaces": {
+        "hide-empty": true,
+        "pinned": [1, 2, 3, 4],
+        "tag-names": ["一","二","三","四","五","六","七","八","九"],
+        "overview-label": "OVERVIEW",
+        "on-click": "activate",
+        "on-click-right": "toggle"
+    },
+    "layout": {
+        "format": "{}"
+    },
+    "window": {
+        "format": "{}"
+    },
+
+    "cpu": {
+        "format": " {load}%"
+    },
+    "memory": {
+        "format": " {}%"
+    },
+
+    "battery": {
+        "format": "{icon} {percent}% {ac}",
+        "icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+        // "icon-charging": "󰂄",
+        // "icon-full": "󰁹",
+        //"icon-ac": """
+        "hide-on-ac": true
+    },
+    "clock": {
+      "locale": "en_US.UTF-8",
+      "format": "%H:%M",
+      "format-alt": "%b %d"
+    }
+}

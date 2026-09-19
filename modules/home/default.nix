@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./sync_config.nix
     ./desktop.nix
     ./dev.nix
     ./fonts.nix
