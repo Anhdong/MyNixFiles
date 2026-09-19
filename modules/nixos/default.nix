@@ -9,5 +9,6 @@
     ./power.nix
     ./sddm.nix
     ./timezone_locale.nix
+    ./polkit.nix
     ];
 }
