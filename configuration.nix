@@ -14,7 +14,6 @@
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
 
-
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users."anhdong" = {
     isNormalUser = true;
@@ -34,6 +33,12 @@
 
   #D-Bus service
   programs.dconf.enable = true;
+  
+  #AppImage
+  programs.appimage = {
+    enable = true;
+    binfmt = true;
+  };
 
   # Home Manager
   home-manager = {
