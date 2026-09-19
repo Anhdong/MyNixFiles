@@ -1,0 +1,17 @@
+#STYLE
+font= monospace 16
+background-color=#00000055
+text-color=#ffffffff
+
+width=320
+height=160
+
+border-size=2
+border-color=#ffffff77
+border-radius=2
+
+
+progress-color= source #ffffff77
+
+#
+default-timeout=2500
