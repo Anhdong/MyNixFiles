@@ -90,12 +90,43 @@
         "type": "github"
       }
     },
+    "nixpkgs_3": {
+      "locked": {
+        "lastModified": 0,
+        "narHash": "sha256-HMpK7hNjhEk4z5SFg5UtxEio9OWFocHdaQzCfW1pE7w=",
+        "path": "/nix/store/rc7vhx0w0hxz170r88i0s04n5b9rwqa9-source",
+        "type": "path"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "type": "indirect"
+      }
+    },
+    "pond": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_3"
+      },
+      "locked": {
+        "lastModified": 1741603727,
+        "narHash": "sha256-jSPf2M99wp6GE7QvUrWCOob53rFrU9mctI2H7K/h1T0=",
+        "owner": "Morgenkaff",
+        "repo": "flake-for-pond",
+        "rev": "47e72c280d0187bc4dc10ed09f05138bd9df25d8",
+        "type": "gitlab"
+      },
+      "original": {
+        "owner": "Morgenkaff",
+        "repo": "flake-for-pond",
+        "type": "gitlab"
+      }
+    },
     "root": {
       "inputs": {
         "helium-flake": "helium-flake",
         "home-manager": "home-manager",
         "mangobar": "mangobar",
-        "nixpkgs": "nixpkgs_2"
+        "nixpkgs": "nixpkgs_2",
+        "pond": "pond"
       }
     }
   },

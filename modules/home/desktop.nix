@@ -14,6 +14,8 @@
     swayidle
     wallust
 
+    inputs.pond.packages.${pkgs.system}.default
+
     grim
     slurp
     satty

@@ -15,6 +15,8 @@
       url = "github:oxcl/nix-flake-helium-browser";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    pond.url = "gitlab:Morgenkaff/flake-for-pond";
   };
 
   outputs = { self, nixpkgs, ... }@inputs: {
