@@ -8,7 +8,6 @@
     fuzzel
     mako
     libnotify
-    wlsunset
     swaybg
     swaylock
     swayidle

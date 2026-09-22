@@ -10,5 +10,6 @@
     ./tui.nix
     ./bash.nix
     ./media.nix
+    ./gammastep.nix
   ];
 }
