@@ -2,8 +2,8 @@
 
 {
   imports = [
-    ./hardware-configuration.nix
-    ./modules/nixos
+      ./hardware-configuration.nix
+      ./modules/nixos
     ];
 
   # Use the systemd-boot EFI boot loader.
@@ -40,25 +40,10 @@
     binfmt = true;
   };
 
-  # Home Manager
-  home-manager = {
-    extraSpecialArgs = { inherit inputs; };
-    users = {
-      "anhdong" = import ./home.nix;
-    };
-  };
-
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
   
-  # List packages installed in system profile.
-  environment.systemPackages = with pkgs; [
-  ];
-
-  # Hardware graphics
-  hardware.graphics.enable = true;
-
   # XWAYLAND
   programs.xwayland.enable = true;
 

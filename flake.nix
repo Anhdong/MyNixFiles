@@ -19,19 +19,27 @@
     pond.url = "gitlab:Morgenkaff/flake-for-pond";
   };
 
-  outputs = { self, nixpkgs, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, ... }@inputs: 
+  let
+    system = "x86_64-linux";
+    pkgs = nixpkgs.legacyPackages.${system};
+  in {
+    # NixOS System Config
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
-      specialArgs = { 
-	inherit inputs;
-      };
-      
-      modules = [
-        ./configuration.nix
-        
-	inputs.home-manager.nixosModules.default
-      
+      system = system;
+      specialArgs = { inherit inputs; };
+      modules = [ 
+        ./configuration.nix 
         inputs.helium-flake.nixosModules.default
+      ];
+    };
+
+    # Standalone Home Manager Config
+    homeConfigurations."anhdong" = home-manager.lib.homeManagerConfiguration {
+      inherit pkgs;
+      extraSpecialArgs = { inherit inputs; }; 
+      modules = [ 
+        ./home.nix 
       ];
     };
   };
