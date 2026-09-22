@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+choice=$(printf '%s\n' \
+    "󰐥 Power" \
+    "  Wifi" \
+    "󰂯 Bluetooth" |
+    fuzzel --dmenu --prompt="> ")
+
+case "$choice" in
+    "󰐥"*) ~/.config/fuzzel/scripts/powermenu ;;
+    ""*) foot --app-id impala impala ;;
+    "󰂯"*) foot --app-id bluetui bluetui ;;
+esac

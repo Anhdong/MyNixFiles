@@ -11,3 +11,9 @@
     margin: 0px 0px;
     border-radius: 0px;
 }
+
+#tags.active {
+    background: solid;
+    background-color: #ffffff;
+    color: #000000;
+}

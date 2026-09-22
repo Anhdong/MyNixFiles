@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+choice=$(printf '%s\n' \
+    "󰌾  Lock" \
+    "󰍃  Logout" \
+    "󰤄  Suspend" \
+    "󰜉  Reboot" \
+    "󰐥  Poweroff" |
+    fuzzel --dmenu --prompt="Power: ")
+
+case "$choice" in
+    "󰌾"*) loginctl lock-session ;;
+    "󰍃"*) loginctl terminate-user "$USER" ;;
+    "󰤄"*) systemctl suspend ;;
+    "󰜉"*) systemctl reboot ;;
+    "󰐥"*) systemctl poweroff ;;
+esac
+
