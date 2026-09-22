@@ -32,6 +32,6 @@ let
 
 in {
   # Argument 1: The absolute string path to where the folder lives on your actual machine.
-  # Argument 2: The relative Nix path to read the files during evaluation (up 2 levels, then into configs).
-  xdg.configFile = mkSymlinks "${config.home.homeDirectory}/.nixfiles/configs" ../../configs;
+  # Argument 2: The relative Nix path to read the files during evaluation (up 2 levels, then into config).
+  xdg.configFile = mkSymlinks "${config.home.homeDirectory}/.nixfiles/config" ../../config;
 }
