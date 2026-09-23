@@ -16,7 +16,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    pond.url = "gitlab:Morgenkaff/flake-for-pond";
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs: 
