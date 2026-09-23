@@ -4,6 +4,8 @@
   imports = [
     ./sync_config.nix
     ./desktop.nix
+    ./swayidle.nix
+    ./swaylock.nix
     ./dev.nix
     ./fonts.nix
     ./helium.nix

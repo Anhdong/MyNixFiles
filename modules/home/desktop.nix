@@ -9,7 +9,6 @@
     mako
     libnotify
     swaybg
-    swaylock
     swayidle
     wallust
 

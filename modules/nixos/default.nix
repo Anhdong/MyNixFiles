@@ -11,5 +11,6 @@
     ./sddm.nix
     ./timezone_locale.nix
     ./polkit.nix
+    ./pam.nix
     ];
 }
