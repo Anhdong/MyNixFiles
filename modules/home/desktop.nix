@@ -5,7 +5,8 @@
 
   home.packages = with pkgs; [
     inputs.mangobar.packages.${pkgs.system}.mangobar
-    fuzzel
+    inputs.otter-launcher.packages.${pkgs.system}.default
+    fsel
     mako
     libnotify
     swaybg

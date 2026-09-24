@@ -11,6 +11,8 @@
     
     mangobar.url = "github:mangowm/mangobar";
 
+    otter-launcher.url = "github:kuokuo123/otter-launcher";
+
     helium-flake = {
       url = "github:oxcl/nix-flake-helium-browser";
       inputs.nixpkgs.follows = "nixpkgs";
