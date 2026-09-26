@@ -5,6 +5,7 @@
     ./audio.nix
     ./graphic.nix
     ./keyboard.nix
+    ./keyd.nix
     ./network.nix
     ./bluetooth.nix
     ./power.nix
