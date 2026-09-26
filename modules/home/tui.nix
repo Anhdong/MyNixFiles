@@ -11,10 +11,11 @@
     brightnessctl
     playerctl
 
-    lazygit
+    fzf
     eza
     bat
     zoxide
+    lazygit
 
   ];
 

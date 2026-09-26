@@ -8,6 +8,7 @@
     ./swaylock.nix
     ./dev.nix
     ./fonts.nix
+    ./nvim.nix
     ./helium.nix
     ./tui.nix
     ./bash.nix
