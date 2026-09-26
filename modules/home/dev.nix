@@ -2,11 +2,14 @@
 {
   home.packages = with pkgs; [
     foot
-    vim
-    neovim
     git
     gh
     vscodium
+
+    #Compile tools
+    gcc
+    python3
+    nodejs
   ];
 
 }
