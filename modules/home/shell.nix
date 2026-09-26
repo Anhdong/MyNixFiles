@@ -2,6 +2,10 @@
 
 {
   home.packages = with pkgs; [
+    fzf
+    eza
+    bat
+    
     blesh
     starship
   ];
@@ -17,14 +21,11 @@
       la = "eza -a";
       lla = "eza -la";
 
-      cat = "bat";
-
       nv = "nvim";
       y = "yazi";
 
       nswitch = "sudo nixos-rebuild switch --flake";
       ntest = "sudo nixos-rebuild test --flake";
-
 
     };
 
@@ -34,11 +35,14 @@
     '';
   };
 
+  programs.zoxide = {
+    enable = true;
+    enableBashIntegration = true;
+  };
+
   programs.starship = {
     enable = true;
-
     enableBashIntegration = true;
-
     settings = {
       add_newline = false;
 

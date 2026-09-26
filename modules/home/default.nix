@@ -11,7 +11,7 @@
     ./nvim.nix
     ./helium.nix
     ./tui.nix
-    ./bash.nix
+    ./shell.nix
     ./media.nix
     ./gammastep.nix
   ];
