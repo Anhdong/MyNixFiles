@@ -1,0 +1,32 @@
+# Global configuration
+font= monospace 16
+width=320
+height=120
+
+default-timeout=2500
+max-history=10
+sort=-time
+layer=overlay
+
+# Colors
+background-color={{background}}{{alpha | alpha_hexa}}
+text-color={{foreground}}
+border-color={{color4}}
+progress-color= source {{color2}}{{alpha | alpha_hexa}}
+
+# Border
+border-size=2
+border-radius=4
+padding=10
+margin=10
+
+# Urgency
+[urgency=low]
+border-color={{color4}}
+
+[urgency=normal]
+border-color={{color2}}
+
+[urgency=high]
+border-color={{color13}}
+text-color={{color13}}

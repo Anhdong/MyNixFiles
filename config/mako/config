@@ -1,17 +1,32 @@
-#STYLE
+# Global configuration
 font= monospace 16
-background-color=#00000055
-text-color=#ffffffff
-
 width=320
 height=120
 
-border-size=2
-border-color=#ffffff77
-border-radius=2
-
-
-progress-color= source #ffffff77
-
-#
 default-timeout=2500
+max-history=10
+sort=-time
+layer=overlay
+
+# Colors
+background-color=#050300D9
+text-color=#E4DEC4
+border-color=#858379
+progress-color= source #7A5F4ED9
+
+# Border
+border-size=2
+border-radius=4
+padding=10
+margin=10
+
+# Urgency
+[urgency=low]
+border-color=#858379
+
+[urgency=normal]
+border-color=#7A5F4E
+
+[urgency=high]
+border-color=#909078
+text-color=#909078

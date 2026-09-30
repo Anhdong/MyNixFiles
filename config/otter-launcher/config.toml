@@ -130,7 +130,7 @@ with_argument = true
 unbind_proc = true
 
 [[modules]]
-description = "search archwiki"
+description = "search nixwiki"
 prefix = "nix"
 cmd = "xdg-open https://wiki.nixos.org/w/index.php?search='{}'"
 with_argument = true
@@ -138,9 +138,9 @@ url_encode = true
 unbind_proc = true
 
 [[modules]]
-description = "search Nixpkgs"
+description = "search nixpkgs"
 prefix = "pkgs"
-cmd = "xdg-open https://search.nixos.org/packages?channel=unstable&query='{}'"
+cmd = "xdg-open https://search.nixos.org/packages?query='{}'&channel=unstable"
 with_argument = true
 url_encode = true
 unbind_proc = true
@@ -164,3 +164,13 @@ find $HOME -type f -not -path '*/.cache/*' 2>/dev/null | fzf --info-command 'pri
 description = "open dirs (yazi)"
 prefix = "yz"
 cmd = "yazi"
+
+[[modules]]
+description = "wifi (impala)"
+prefix = "wf"
+cmd = "impala"
+
+[[modules]]
+description = "bluetooth (bluetui)"
+prefix = "bt"
+cmd = "bluetui"
