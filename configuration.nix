@@ -1,5 +1,4 @@
 { config, pkgs, inputs, ... }:
-
 {
   imports = [
       ./hardware-configuration.nix
@@ -18,7 +17,7 @@
   users.users."anhdong" = {
     isNormalUser = true;
     description = "anhdong";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "video" "render"];
     packages = with pkgs; [];
   };
 
@@ -28,24 +27,14 @@
     "flakes"
   ];
 
+  # Allow unfree packages
+  nixpkgs.config.allowUnfree = true;
+
   #Window Manager
   programs.mango.enable = true;
 
   #D-Bus service
   programs.dconf.enable = true;
-  
-  #AppImage
-  programs.appimage = {
-    enable = true;
-    binfmt = true;
-  };
-
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
-
-  
-  # XWAYLAND
-  programs.xwayland.enable = true;
 
   # DO NOT REMOVE THIS! This is the version you install NixOS
   system.stateVersion = "26.05"; # Did you read the comment?

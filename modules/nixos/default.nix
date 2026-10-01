@@ -13,7 +13,7 @@
     ./timezone_locale.nix
     ./polkit.nix
     ./pam.nix
-
+    ./compat.nix
     ./mysql.nix
     ];
 }
