@@ -8,6 +8,12 @@
 
   boot.initrd.kernelModules = [ "xe" ];
 
+  nixpkgs.overlays = [
+    (final: prev: {
+      intel-level-zero-gpu-raytracing = final.callPackage ./level-zero-raytracing/intel-level-zero-gpu-raytracing.nix { };
+    })
+  ];
+
   hardware.graphics = {
     enable = true;
     enable32Bit = true; #For 32bit steam game or wineapp
@@ -20,6 +26,8 @@
       # oneAPI / Level Zero
       level-zero
       intel-compute-runtime
+
+      intel-level-zero-gpu-raytracing
     ];
   };
 
