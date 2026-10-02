@@ -32,6 +32,7 @@
 
   #Window Manager
   programs.mango.enable = true;
+  programs.labwc.enable = true;
 
   #D-Bus service
   programs.dconf.enable = true;
