@@ -11,6 +11,7 @@
     brightnessctl
     playerctl
 
+    peaclock
   ];
 
 }

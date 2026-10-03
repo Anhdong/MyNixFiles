@@ -10,9 +10,6 @@ systemctl --user restart xdg-desktop-portal &
 # notify
 mako >/dev/null 2>&1 &
 
-# night light
-wlsunset -S 05:00 -s 20:00 >/dev/null 2>&1 &
-
 # wallpaper
 swaybg -i ~/.config/background >/dev/null 2>&1 &
 
