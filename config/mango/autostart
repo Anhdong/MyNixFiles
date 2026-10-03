@@ -7,6 +7,9 @@ systemctl --user restart xdg-desktop-portal &
 # some env can't auto run the portal, so need this
 /usr/lib/xdg-desktop-portal-wlr  >/dev/null 2>&1 &
 
+# swayidle
+swayidle >/dev/null 2>&1 &
+
 # notify
 mako >/dev/null 2>&1 &
 
