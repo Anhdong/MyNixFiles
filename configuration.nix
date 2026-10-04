@@ -17,7 +17,14 @@
   users.users."anhdong" = {
     isNormalUser = true;
     description = "anhdong";
-    extraGroups = [ "networkmanager" "wheel" "video" "render"];
+    extraGroups = [ 
+	"networkmanager" 
+	"wheel" 
+	"video" 
+	"render"
+	"storage"
+
+	];
     packages = with pkgs; [];
   };
 

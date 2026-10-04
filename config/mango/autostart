@@ -24,6 +24,9 @@ mangobar >/dev/null 2>&1 &
 # echo "Xft.dpi: 140" | xrdb -merge #dpi缩放
 # xrdb merge ~/.Xresources >/dev/null 2>&1
 
+# udiskie for automount
+udiskie -a -n >/dev/null 2>&1 &
+
 # ime input
 fcitx5 --replace -d >/dev/null 2>&1 &
 

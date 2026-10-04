@@ -14,6 +14,7 @@
     ./polkit.nix
     ./pam.nix
     ./compat.nix
+    ./storage.nix
     ./mysql.nix
     ];
 }
