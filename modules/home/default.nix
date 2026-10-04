@@ -9,7 +9,7 @@
     ./dev.nix
     ./fonts.nix
     ./nvim.nix
-    ./helium.nix
+    ./zen_browser.nix
     ./tui.nix
     ./shell.nix
     ./media.nix

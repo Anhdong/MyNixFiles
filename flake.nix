@@ -13,8 +13,8 @@
 
     otter-launcher.url = "github:kuokuo123/otter-launcher";
 
-    helium-flake = {
-      url = "github:oxcl/nix-flake-helium-browser";
+    zen-browser = {
+      url = "github:youwen5/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -31,7 +31,6 @@
       specialArgs = { inherit inputs; };
       modules = [ 
         ./configuration.nix 
-        inputs.helium-flake.nixosModules.default
       ];
     };
 
