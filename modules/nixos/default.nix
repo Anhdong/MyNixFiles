@@ -3,6 +3,7 @@
 {
   imports = [
     ./audio.nix
+    ./android.nix
     ./graphic.nix
     ./keyboard.nix
     ./keyd.nix
