@@ -12,7 +12,7 @@
     ./zen_browser.nix
     ./tui.nix
     ./shell.nix
-    ./media.nix
+    ./others.nix
     ./gammastep.nix
   ];
 }

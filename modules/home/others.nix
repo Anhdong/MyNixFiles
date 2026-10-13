@@ -4,5 +4,7 @@
     onlyoffice-desktopeditors
     vesktop
     audacity
+    proton-vpn-cli
+    bitwarden-cli
   ];
 }
