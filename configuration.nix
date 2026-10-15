@@ -37,9 +37,6 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  #Window Manager
-  programs.mango.enable = true;
-
   #D-Bus service
   programs.dconf.enable = true;
 
