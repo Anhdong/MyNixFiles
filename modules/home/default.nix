@@ -4,6 +4,7 @@
   imports = [
     ./sync_config.nix
     ./desktop.nix
+    ./gtk.nix
     ./swayidle.nix
     ./swaylock.nix
     ./dev.nix

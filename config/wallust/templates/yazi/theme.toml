@@ -1,0 +1,25 @@
+[icon]
+# Default folder & hidden directory icons
+prepend_conds = [
+  { if = "dir",          text = "", fg = "{{color4}}" }, # Primary accent color
+  { if = "hidden & dir", text = "", fg = "{{color8}}" }  # Muted secondary color
+]
+
+# Specific directory icon colors mapped to Wallust palette colors
+prepend_dirs = [
+  { name = "Downloads", text = "", fg = "{{color2}}" }, # Accent 2 (Green/Teal)
+  { name = "Documents", text = "󰈙", fg = "{{color4}}" }, # Accent 4 (Primary accent)
+  { name = "Pictures",  text = "", fg = "{{color3}}" }, # Accent 3 (Yellow/Warm)
+  { name = "Music",     text = "", fg = "{{color5}}" }, # Accent 5 (Magenta/Purple)
+  { name = "Videos",    text = "", fg = "{{color6}}" }, # Accent 6 (Cyan)
+  { name = "Desktop",   text = "", fg = "{{color4}}" },
+  { name = ".config",   text = "", fg = "{{color8}}" },
+  { name = ".git",      text = "", fg = "{{color1}}" }  # Accent 1 (Red)
+]
+
+# File extension icon colors
+prepend_exts = [
+  { name = "nix", text = "", fg = "{{color4}}" },
+  { name = "sh",  text = "", fg = "{{color2}}" },
+  { name = "py",  text = "", fg = "{{color3}}" }
+]

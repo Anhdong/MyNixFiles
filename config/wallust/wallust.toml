@@ -22,39 +22,43 @@ alpha = 85
 [templates]
 pallete = {
     template = 'pallete/pallete.md',
-    target = '~/.nixfiles/config/palette.md',
+    target = '~/.config/palette.md',
 }
 
 mango = {
     template = 'mango/style.conf',
-    target = '~/.nixfiles/config/mango/style.conf',
+    target = '~/.config/mango/style.conf',
 }
 
 mangobar = {
     template = 'mangobar/style.css',
-    target = '~/.nixfiles/config/mangobar/style.css',
+    target = '~/.config/mangobar/style.css',
 }
 
 foot = {
     template = 'foot/colors.ini',
-    target = '~/.nixfiles/config/foot/colors.ini',
+    target = '~/.config/foot/colors.ini',
 }
 
 mako = {
     template = 'mako/config',
-    target = '~/.nixfiles/config/mako/config',
+    target = '~/.config/mako/config',
 }
 
 gtk-3 = {
     template = 'gtk/gtk.css',
-    target = '~/.nixfiles/config/gtk-3.0/gtk.css',
+    target = '~/.config/gtk-3.0/gtk.css',
 }
 
 gtk-4 = {
     template = 'gtk/gtk.css',
-    target = '~/.nixfiles/config/gtk-4.0/gtk.css',
+    target = '~/.config/gtk-4.0/gtk.css',
 }
 
+yazi = {
+    template = 'yazi/theme.toml',
+    target = '~/.config/yazi/theme.toml',
+}
 [hooks]
 mango = "mmsg dispatch reload_config"
 mangobar = "pkill mangobar && mangobar >/dev/null 2>&1 &"
