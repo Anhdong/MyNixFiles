@@ -14,7 +14,7 @@
     otter-launcher.url = "github:kuokuo123/otter-launcher";
 
     zen-browser = {
-      url = "github:youwen5/zen-browser-flake";
+      url = "github:youwen5/zen-browser-flake/458cd16";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
