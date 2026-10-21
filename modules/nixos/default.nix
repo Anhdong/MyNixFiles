@@ -15,7 +15,7 @@
     ./polkit.nix
     ./pam.nix
     ./compat.nix
-    ./window_manager.nix
+    ./mango.nix
     ./storage.nix
     ./mysql.nix
     ];
