@@ -13,7 +13,8 @@
 	"clock"
     ],
     "modules-right": [
-	"battery"
+	"battery",
+	"custom/power"
     ],
 
     "workspaces": {
@@ -48,7 +49,12 @@
     },
     "clock": {
       "locale": "en_US.UTF-8",
-      "format": "%H:%M",
-      "format-alt": "%b %d"
+      "format": "%H:%M %b %d",
+      "format-alt": "ㅇㅅㅇ"
+    },
+
+        "custom/power": {
+        "format": "",
+        "on-click": "foot --app-id menu ~/.config/scripts/power"
     }
 }

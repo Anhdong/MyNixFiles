@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+SELECTION=$(printf "⏻ Power Off\n󰑓 Reboot\n󰒲 Sleep\n Lock\n󰗽 Logout" | fsel --dmenu)
+
+case "$SELECTION" in
+    "⏻"*) systemctl poweroff;;
+    "󰒲"*) systemctl suspend;;
+    "󰑓"*) systemctl reboot;;
+    ""*) swaylock;;
+    "󰗽"*) loginctl terminate-user "$USER";;
+    *)    exit 0 ;;
+esac

@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+SELECTION=$(printf " Apps\n  Wifi\n󰂯 Bluetooth\n Wallpaper\n⏻ Power" | fsel --dmenu)
+
+case "$SELECTION" in
+    ""*) exec fsel -d;;
+    ""*) impala;;
+    "󰂯"*) bluetui;;
+    ""*) ~/.config/scripts/setwall ;;
+    "⏻"*) ~/.config/scripts/power ;;
+    *)        exit 0 ;;
+esac
