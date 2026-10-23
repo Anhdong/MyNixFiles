@@ -1,8 +1,13 @@
 /* ==========================================================================
-   Base Palette & Libadwaita Named Colors (GTK 3 & GTK 4)
+   wallust 3.5.2 template: gtk.css
+   Targets: libadwaita (GTK4) and adw-gtk3 (GTK3)
+   Output:  ~/.config/gtk-3.0/gtk.css  and  ~/.config/gtk-4.0/gtk.css
    ========================================================================== */
 
-/* Accents & Status Colors */
+/* ==========================================================================
+   Accent & Status Colors
+   ========================================================================== */
+
 @define-color accent_color {{color4}};
 @define-color accent_bg_color {{color4}};
 @define-color accent_fg_color {{background}};
@@ -23,36 +28,106 @@
 @define-color error_bg_color {{color1}};
 @define-color error_fg_color {{background}};
 
-/* Window Base */
-@define-color window_bg_color {{background}};
+/* ==========================================================================
+   Window & View
+   view_bg matches the window background for a flat, clean look. Cards and
+   popovers are lightened slightly to give subtle depth.
+   ========================================================================== */
+
+@define-color window_bg_color alpha({{background}}, {{alpha_dec}});
 @define-color window_fg_color {{foreground}};
 
-/* Main File View / Content Area (Uses color0 for contrast against window/sidebar) */
-@define-color view_bg_color {{color0}};
+@define-color view_bg_color alpha({{background}}, {{alpha_dec}});
 @define-color view_fg_color {{foreground}};
 
-/* Libadwaita Sidebar (Nautilus, Loupe, etc.) */
-@define-color sidebar_bg_color {{background}};
+/* ==========================================================================
+   Sidebar, Secondary Sidebar
+   ========================================================================== */
+
+@define-color sidebar_bg_color alpha({{background}}, {{alpha_dec}});
 @define-color sidebar_fg_color {{foreground}};
-@define-color sidebar_backdrop_color {{background}};
-@define-color sidebar_border_color {{color8}};
+@define-color sidebar_backdrop_color alpha({{background}}, {{alpha_dec}});
+@define-color sidebar_border_color rgba(255, 255, 255, 0.06);
+@define-color sidebar_shade_color rgba(0, 0, 0, 0.25);
 
-/* Headerbar / Titlebar */
-@define-color headerbar_bg_color {{background}};
-@define-color headerbar_fg_color {{foreground}};
-@define-color headerbar_border_color {{color8}};
-@define-color headerbar_backdrop_color @window_bg_color;
-
-/* Cards, Dialogs, Popovers */
-@define-color card_bg_color {{color0}};
-@define-color card_fg_color {{foreground}};
-@define-color dialog_bg_color {{background}};
-@define-color dialog_fg_color {{foreground}};
-@define-color popover_bg_color {{color0}};
-@define-color popover_fg_color {{foreground}};
+@define-color secondary_sidebar_bg_color alpha({{background}}, {{alpha_dec}});
+@define-color secondary_sidebar_fg_color {{foreground}};
+@define-color secondary_sidebar_backdrop_color alpha({{background}}, {{alpha_dec}});
+@define-color secondary_sidebar_border_color rgba(255, 255, 255, 0.06);
+@define-color secondary_sidebar_shade_color rgba(0, 0, 0, 0.25);
 
 /* ==========================================================================
-   GTK 3 & Fallback CSS Rules (For Non-Libadwaita / Legacy Apps)
+   Headerbar, Toolbars
+   ========================================================================== */
+
+@define-color headerbar_bg_color alpha({{background}}, {{alpha_dec}});
+@define-color headerbar_fg_color {{foreground}};
+@define-color headerbar_border_color rgba(255, 255, 255, 0.06);
+@define-color headerbar_backdrop_color alpha({{background}}, {{alpha_dec}});
+@define-color headerbar_shade_color rgba(0, 0, 0, 0.36);
+@define-color headerbar_darker_shade_color rgba(0, 0, 0, 0.9);
+
+/* ==========================================================================
+   Cards, Dialogs, Popovers
+   ========================================================================== */
+
+@define-color card_bg_color {{background | lighten(0.05)}};
+@define-color card_fg_color {{foreground}};
+@define-color card_shade_color rgba(0, 0, 0, 0.36);
+
+@define-color dialog_bg_color {{background}};
+@define-color dialog_fg_color {{foreground}};
+
+@define-color popover_bg_color {{background | lighten(0.05)}};
+@define-color popover_fg_color {{foreground}};
+@define-color popover_shade_color rgba(0, 0, 0, 0.25);
+
+/* Softer, lighter text for file names (pastel tint of the foreground) */
+@define-color file_label_color {{foreground | lighten(0.25)}};
+@define-color file_icon_color {{foreground | lighten(0.25)}};
+
+/* ==========================================================================
+   Shades & Scrollbars
+   ========================================================================== */
+
+@define-color shade_color rgba(0, 0, 0, 0.36);
+@define-color scrollbar_outline_color rgba(0, 0, 0, 0.5);
+
+/* ==========================================================================
+   Legacy GTK3 names (read by adw-gtk3 and many older themes/apps)
+   ========================================================================== */
+
+@define-color theme_bg_color {{background}};
+@define-color theme_fg_color {{foreground}};
+@define-color theme_base_color {{background}};
+@define-color theme_text_color {{foreground}};
+@define-color theme_selected_bg_color {{color4}};
+@define-color theme_selected_fg_color {{background}};
+
+@define-color theme_unfocused_bg_color {{background}};
+@define-color theme_unfocused_fg_color {{foreground}};
+@define-color theme_unfocused_base_color {{background}};
+@define-color theme_unfocused_text_color {{foreground}};
+@define-color theme_unfocused_selected_bg_color {{color4}};
+@define-color theme_unfocused_selected_fg_color {{background}};
+
+@define-color borders rgba(255, 255, 255, 0.10);
+@define-color unfocused_borders rgba(255, 255, 255, 0.06);
+@define-color insensitive_bg_color {{background}};
+@define-color insensitive_fg_color {{color8}};
+@define-color insensitive_base_color {{background}};
+@define-color insensitive_borders rgba(255, 255, 255, 0.06);
+
+@define-color content_view_bg {{background}};
+@define-color text_view_bg {{background}};
+
+@define-color warning_color_legacy {{color3}};
+@define-color error_color_legacy {{color1}};
+@define-color success_color_legacy {{color2}};
+
+/* ==========================================================================
+   Fallback rules (GTK3 apps / non-libadwaita apps)
+   Kept minimal: with adw-gtk3 the named colors above do the heavy lifting.
    ========================================================================== */
 
 window {
@@ -77,4 +152,116 @@ treeview {
 headerbar {
     background-color: @headerbar_bg_color;
     color: @headerbar_fg_color;
+}
+
+/* Text selection only. A catch-all "*:selected" rule paints every selected
+   row/cell solid accent in GTK4 and fights the soft selection further down. */
+textview text selection,
+entry selection,
+label selection {
+    background-color: @accent_bg_color;
+    color: @accent_fg_color;
+}
+
+entry,
+spinbutton {
+    background-color: @view_bg_color;
+    color: @view_fg_color;
+    border-color: @borders;
+}
+
+popover,
+popover.background,
+menu {
+    background-color: @popover_bg_color;
+    color: @popover_fg_color;
+}
+
+/* ==========================================================================
+   Cleaner look (Nautilus / libadwaita)
+   Flat sidebar, rounded rows, subtle hover/selection, no heavy separators.
+   ========================================================================== */
+
+.navigation-sidebar,
+.navigation-sidebar row {
+    background: transparent;
+}
+
+.navigation-sidebar row {
+    border-radius: 10px;
+    margin: 2px 6px;
+}
+
+.navigation-sidebar row:hover {
+    background-color: alpha(@window_fg_color, 0.06);
+}
+
+.navigation-sidebar row:selected {
+    background-color: alpha(@accent_bg_color, 0.18);
+    color: @window_fg_color;
+}
+
+headerbar {
+    box-shadow: none;
+    border-bottom: none;
+}
+
+/* Soft, rounded selection in file lists instead of a solid accent block */
+listview > row,
+gridview > child,
+columnview > listview > row {
+    border-radius: 10px;
+    margin: 1px 6px;
+}
+
+listview > row:selected,
+gridview > child:selected,
+columnview > listview > row:selected,
+columnview > listview > row:selected:focus {
+    background-color: alpha(@accent_bg_color, 0.18);
+    color: @window_fg_color;
+}
+
+listview > row:hover,
+gridview > child:hover,
+columnview > listview > row:hover {
+    background-color: alpha(@window_fg_color, 0.05);
+}
+
+/* Make sure no inner cell paints its own solid block over the row */
+columnview > listview > row > cell,
+columnview > listview > row:selected > cell,
+gridview > child:selected > box {
+    background-color: transparent;
+    color: inherit;
+}
+
+/* ==========================================================================
+   Monochrome icons + lighter file names (Nautilus)
+   GTK-native approach, using icon properties instead of the widget-level
+   "filter" (which did nothing before):
+     -gtk-icon-style:  symbolic  -> prefer the -symbolic variant of each icon
+     -gtk-icon-filter: ...       -> filter applied to the icon image itself,
+                                    works even when no symbolic variant exists
+   Symbolic icons are painted with "color", so they follow wallust.
+   If the symbolic style kicks in and you want the wallust tint to show,
+   delete the -gtk-icon-filter line.
+   ========================================================================== */
+
+columnview image,
+columnview icon,
+gridview image,
+gridview icon,
+.icon-dropshadow,
+image.icon-dropshadow {
+    -gtk-icon-style: symbolic;
+    -gtk-icon-filter: grayscale(1) brightness(1.05);
+    color: @file_icon_color;
+}
+
+/* File names: lighter tint, header row untouched */
+columnview > listview label,
+columnview > listview row label,
+gridview child label {
+    color: @file_label_color;
 }
