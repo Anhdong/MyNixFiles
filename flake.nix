@@ -12,7 +12,7 @@
     mangobar.url = "github:mangowm/mangobar";
 
     zen-browser = {
-      url = "github:youwen5/zen-browser-flake/458cd16";
+      url = "github:youwen5/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 

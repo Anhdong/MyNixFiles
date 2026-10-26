@@ -16,6 +16,7 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Setup lazy.nvim
 require("lazy").setup({
+  git = { timeout = 600 },
   spec = {
     -- import your plugins
     { import = "plugins" },

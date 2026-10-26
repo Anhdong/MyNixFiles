@@ -59,6 +59,12 @@ yazi = {
     template = 'yazi/theme.toml',
     target = '~/.config/yazi/theme.toml',
 }
+
+neopywal = { 
+    template = "neopywal/colors_neopywal.vim",	
+    target = "~/.cache/wallust/colors_neopywal.vim",
+}
+
 [hooks]
 mango = "mmsg dispatch reload_config"
 mangobar = "systemctl --user restart mangobar"
