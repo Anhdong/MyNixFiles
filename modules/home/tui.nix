@@ -12,6 +12,8 @@
     playerctl
 
     peaclock
+    cava
+    lavat
   ];
 
 }

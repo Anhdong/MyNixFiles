@@ -40,6 +40,11 @@ foot = {
     target = '~/.config/foot/colors.ini',
 }
 
+rofi = {
+    template = 'rofi/colors.rasi',
+    target = '~/.config/rofi/colors.rasi',
+}
+
 mako = {
     template = 'mako/config',
     target = '~/.config/mako/config',
@@ -61,8 +66,13 @@ yazi = {
 }
 
 neopywal = { 
-    template = "neopywal/colors_neopywal.vim",	
-    target = "~/.cache/wallust/colors_neopywal.vim",
+    template = 'neopywal/colors_neopywal.vim',	
+    target = '~/.cache/wallust/colors_neopywal.vim',
+}
+
+wlogout = { 
+    template = 'wlogout/style.css',	
+    target = '~/.config/wlogout/style.css',
 }
 
 [hooks]

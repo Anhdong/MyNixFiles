@@ -2,9 +2,11 @@
 {
 
   home.packages = with pkgs; [
-    fsel
+
+    rofi
     mako
     libnotify
+    wlogout
     wallust
 
     grim
@@ -20,7 +22,7 @@
     gnome-keyring
     polkit_gnome
 
-    imv
+    swayimg
     mpv
     nautilus
  ];

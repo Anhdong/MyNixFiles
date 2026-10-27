@@ -5,6 +5,7 @@
     fzf
     eza
     bat
+    ripgrep
     
     blesh
     starship
@@ -21,12 +22,13 @@
       la = "eza -a";
       lla = "eza -la";
 
+      ff = "fastfetch";
       nv = "nvim";
       y = "yazi";
 
       nswitch = "sudo nixos-rebuild switch --flake";
       ntest = "sudo nixos-rebuild test --flake";
-
+      hswitch = "home-manager switch --flake";
     };
 
     initExtra = ''

@@ -1,0 +1,31 @@
+/* Wallpaper picker: grid of previews, inherits the main config */
+
+@import "~/.config/rofi/config.rasi"
+
+configuration {
+    modi: "wallpaper:~/.config/rofi/scripts/wallpaper";
+}
+
+window {
+    width:          60%;
+}
+
+listview {
+    columns:        3;
+    lines:          2;
+    fixed-columns:  true;
+    spacing:        20px;
+}
+
+element {
+    orientation:    vertical;
+    spacing:        8px;
+}
+
+element-icon {
+    size:           200px;
+}
+
+element-text {
+    horizontal-align: 0.5;
+}

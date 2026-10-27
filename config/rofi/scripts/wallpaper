@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+# Launch with:
+#   rofi -show wallpaper \
+#        -modi "wallpaper:$HOME/.config/rofi/scripts/wallpaper.sh" \
+#        -config "$HOME/.config/rofi/config-wallpaper.rasi"
+
+dir="$HOME/Pictures/Wallpapers"
+target="$HOME/.config/background"
+
+if [ -z "$1" ]; then
+    # First call: print the list
+    printf '\0prompt\x1fWallpaper\n'
+    printf '\0no-custom\x1ftrue\n'
+
+    find "$dir" -type f \
+        \( -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.png' -o -iname '*.webp' \) \
+        -print0 | sort -z |
+    while IFS= read -r -d '' file; do
+        name="${file#"$dir"/}"
+        # text shown, icon = the image itself, info = full path for the next call
+        printf '%s\0icon\x1f%s\x1finfo\x1f%s\n' "$name" "$file" "$file"
+    done
+else
+    # Second call: rofi passes the picked entry's info in $ROFI_INFO
+    if [ -n "$ROFI_INFO" ] && [ -f "$ROFI_INFO" ]; then
+        cp -f -- "$ROFI_INFO" "$target"
+	(
+            systemctl --user restart swaybg
+            wallust run "$target"
+        ) > /dev/null 2>&1 < /dev/null &
+    fi
+    # Printing nothing makes rofi close
+fi
