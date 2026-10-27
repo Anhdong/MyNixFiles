@@ -14,6 +14,7 @@
     peaclock
     cava
     lavat
+    cmatrix
   ];
 
 }

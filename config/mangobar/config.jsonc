@@ -7,14 +7,14 @@
     // "smooth-scrolling-threshold": 5.0,
 
     "modules-left": [
+	"custom/power",
         "workspaces"
     ],
     "modules-center": [
 	"clock"
     ],
     "modules-right": [
-	"battery",
-	"custom/power"
+	"battery"
     ],
 
     "workspaces": {
@@ -55,6 +55,6 @@
 
         "custom/power": {
         "format": "",
-        "on-click": "foot --app-id menu ~/.config/scripts/power"
+        "on-click": "rofi -show mainmenu -config ~/.config/rofi/config-mainmenu.rasi "
     }
 }
