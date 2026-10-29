@@ -1,6 +1,6 @@
 # Global configuration
-font= monospace 16
-width=320
+font= monospace 12
+width=360
 height=120
 
 default-timeout=2500

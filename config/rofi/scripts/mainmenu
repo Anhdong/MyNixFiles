@@ -1,8 +1,4 @@
 #!/usr/bin/env bash
-# Rofi script mode: main menu that launches the other rofi tools.
-# Uses the default config (~/.config/rofi/config.rasi), so it looks like the main layout.
-#
-# To add an entry: put its name in the list below, then add a matching line in the case.
 
 rofi_dir="$HOME/.config/rofi"
 scripts="$rofi_dir/scripts"
@@ -28,7 +24,8 @@ if [ -z "$1" ]; then
         "󰸉 Wallpaper" \
         "󰖩 Wifi" \
         "󰂯 Bluetooth" \
-        " Audio"
+        " Audio" \
+        " Color Picker"
 else
     # Second call: $1 is the picked entry
     case "$1" in
@@ -37,5 +34,6 @@ else
         "󰖩"*) launch foot --app-id menu impala ;;
         "󰂯"*) launch foot --app-id menu bluetui ;;
         ""*) launch foot --app-id menu pulsemixer ;;
+        " "*) launch hyprpicker -aq ;;
     esac
 fi

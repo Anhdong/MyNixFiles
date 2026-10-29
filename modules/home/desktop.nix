@@ -12,6 +12,7 @@
     grim
     slurp
     satty
+    hyprpicker
 
     wl-clipboard
     cliphist
