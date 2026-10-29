@@ -5,14 +5,6 @@
       ./modules/nixos
     ];
 
-  # Use the systemd-boot EFI boot loader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-
-  # Use latest kernel.
-  boot.kernelPackages = pkgs.linuxPackages_latest;
-
-
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users."anhdong" = {
     isNormalUser = true;
@@ -23,7 +15,6 @@
 	"video" 
 	"render"
 	"storage"
-
 	];
     packages = with pkgs; [];
   };
@@ -33,7 +24,10 @@
     "nix-command"
     "flakes"
   ];
-
+  
+  #Enable firmware update manager
+  services.fwupd.enable = true;
+  
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 

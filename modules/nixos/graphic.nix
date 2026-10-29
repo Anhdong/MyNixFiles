@@ -1,5 +1,4 @@
 { config, pkgs, ... }:
-
 {
   boot.kernelParams = [
     "i915.force_probe=!7d51"

@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./boot.nix
     ./audio.nix
     ./android.nix
     ./graphic.nix
