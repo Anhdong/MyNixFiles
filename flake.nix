@@ -9,6 +9,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     
+    xremap.url = "github:xremap/nix-flake";
+
     mangobar.url = "github:mangowm/mangobar";
 
     zen-browser = {

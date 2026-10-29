@@ -6,7 +6,7 @@
     ./android.nix
     ./graphic.nix
     ./keyboard.nix
-    ./keyd.nix
+    ./xremap.nix
     ./network.nix
     ./bluetooth.nix
     ./power.nix

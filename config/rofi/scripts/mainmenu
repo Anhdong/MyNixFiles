@@ -27,7 +27,8 @@ if [ -z "$1" ]; then
         " Apps" \
         "󰸉 Wallpaper" \
         "󰖩 Wifi" \
-        "󰂯 Bluetooth"
+        "󰂯 Bluetooth" \
+        " Audio"
 else
     # Second call: $1 is the picked entry
     case "$1" in
@@ -35,5 +36,6 @@ else
         "󰸉"*) launch rofi -show wallpaper -config "$rofi_dir/config-wallpaper.rasi";;
         "󰖩"*) launch foot --app-id menu impala ;;
         "󰂯"*) launch foot --app-id menu bluetui ;;
+        ""*) launch foot --app-id menu pulsemixer ;;
     esac
 fi
