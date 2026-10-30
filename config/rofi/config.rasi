@@ -1,8 +1,8 @@
 /* Rofi app launcher: square, wallust colors, JetBrains Mono */
 
 configuration {
-    modi:               "drun";
-    font:               "JetBrains Mono Medium 12";
+    modi:               "drun,calc,emoji";
+    font:               "JetBrains Mono Medium 16";
     show-icons:         true;
     display-drun:       "Apps";
     drun-display-format: "{name}";

@@ -5,11 +5,12 @@
     ./sync_config.nix
     ./desktop.nix
     ./mangobar.nix
+    ./rofi.nix
     ./gtk.nix
+    ./fonts.nix
     ./awww.nix
     ./hypridle.nix
     ./dev.nix
-    ./fonts.nix
     ./nvim.nix
     ./zen_browser.nix
     ./tui.nix

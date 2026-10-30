@@ -25,7 +25,9 @@ if [ -z "$1" ]; then
         "󰖩 Wifi" \
         "󰂯 Bluetooth" \
         " Audio" \
-        " Color Picker"
+        " Color Picker" \
+        "󰞅 Emoji" \
+        "󱖦 Calculator"
 else
     # Second call: $1 is the picked entry
     case "$1" in
@@ -34,6 +36,8 @@ else
         "󰖩"*) launch foot --app-id menu impala ;;
         "󰂯"*) launch foot --app-id menu bluetui ;;
         ""*) launch foot --app-id menu pulsemixer ;;
-        " "*) launch hyprpicker -aq ;;
+        ""*) launch hyprpicker -aq ;;
+        "󰞅"*) launch rofi -show emoji -config "$rofi_dir/config-mainmenu.rasi";;
+        "󱖦"*) launch rofi -show calc -config "$rofi_dir/config-mainmenu.rasi";;
     esac
 fi

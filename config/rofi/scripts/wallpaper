@@ -9,10 +9,11 @@ if [ -z "$1" ]; then
     printf '\0no-custom\x1ftrue\n'
 
     find "$dir" -type f \
-        \( -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.png' -o -iname '*.webp' \) \
+        \( -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.png' -o -iname '*.webp' -o -iname '*.gif' \) \
         -print0 | sort -z |
     while IFS= read -r -d '' file; do
         name="${file#"$dir"/}"
+        name="${name%.*}" # Removes the file extension
         # text shown, icon = the image itself, info = full path for the next call
         printf '%s\0icon\x1f%s\x1finfo\x1f%s\n' "$name" "$file" "$file"
     done
@@ -20,9 +21,10 @@ else
     # Second call: rofi passes the picked entry's info in $ROFI_INFO
     if [ -n "$ROFI_INFO" ] && [ -f "$ROFI_INFO" ]; then
         cp -f -- "$ROFI_INFO" "$target"
-	(
+    (
             awww img --transition-type fade \
                      --transition-fps 120 \
+                     --transition-bezier .17,.67,.83,.67 \
                      "$target"
             wallust run "$target"
         ) > /dev/null 2>&1 < /dev/null &

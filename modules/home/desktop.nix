@@ -3,7 +3,6 @@
 
   home.packages = with pkgs; [
 
-    rofi
     mako
     libnotify
     wlogout

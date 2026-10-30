@@ -3,7 +3,7 @@
 startd=$(pgrep mangobar)
 
 if [ -n "$startd" ]; then
-	pkill mangobar
+	systemctl --user stop mangobar
 else
-	mangobar >/dev/null 2>&1 &
+	systemctl --user start mangobar
 fi
