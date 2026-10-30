@@ -6,9 +6,8 @@
     ./desktop.nix
     ./mangobar.nix
     ./gtk.nix
-    ./swaybg.nix
-    ./swayidle.nix
-    ./swaylock.nix
+    ./awww.nix
+    ./hypridle.nix
     ./dev.nix
     ./fonts.nix
     ./nvim.nix

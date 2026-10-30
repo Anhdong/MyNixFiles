@@ -12,6 +12,8 @@
     grim
     slurp
     satty
+
+    hyprlock
     hyprpicker
 
     wl-clipboard

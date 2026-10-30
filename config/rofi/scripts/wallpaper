@@ -1,8 +1,4 @@
 #!/usr/bin/env bash
-# Launch with:
-#   rofi -show wallpaper \
-#        -modi "wallpaper:$HOME/.config/rofi/scripts/wallpaper.sh" \
-#        -config "$HOME/.config/rofi/config-wallpaper.rasi"
 
 dir="$HOME/Pictures/Wallpapers"
 target="$HOME/.config/background"
@@ -25,7 +21,9 @@ else
     if [ -n "$ROFI_INFO" ] && [ -f "$ROFI_INFO" ]; then
         cp -f -- "$ROFI_INFO" "$target"
 	(
-            systemctl --user restart swaybg
+            awww img --transition-type fade \
+                     --transition-fps 120 \
+                     "$target"
             wallust run "$target"
         ) > /dev/null 2>&1 < /dev/null &
     fi
