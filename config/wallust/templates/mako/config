@@ -1,10 +1,10 @@
 # Global configuration
-font= monospace 12
+font= sans-serif 14
 width=360
 height=120
 
 default-timeout=2500
-max-history=10
+max-history=25
 sort=-time
 layer=overlay
 

@@ -15,6 +15,7 @@
     cava
     lavat
     cmatrix
+    pokemon-colorscripts
   ];
 
 }

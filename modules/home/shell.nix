@@ -6,6 +6,7 @@
     eza
     bat
     ripgrep
+    jq
     
     blesh
     starship

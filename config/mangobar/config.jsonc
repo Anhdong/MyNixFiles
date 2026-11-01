@@ -3,18 +3,18 @@
     "layer": "top",
     "height": 16,
     "buffer-scale": 1,
-    // "scroll-interval": 100,
-    // "smooth-scrolling-threshold": 5.0,
+    "scroll-interval": 100,
+    "smooth-scrolling-threshold": 5.0,
 
     "modules-left": [
-	"custom/power",
+        "custom/power",
         "workspaces"
     ],
     "modules-center": [
-	"clock"
+        "clock"
     ],
     "modules-right": [
-	"battery"
+        "battery"
     ],
 
     "workspaces": {
@@ -24,9 +24,9 @@
         "overview-label": "OVERVIEW",
         "on-click": "activate",
         "on-click-right": "toggle",
-	"scroll-interval": 100,
-	"on-scroll-up": "mmsg dispatch viewtoright",
-	"on-scroll-down": "mmsg dispatch viewtoleft"
+        "scroll-interval": 50,
+        "on-scroll-up": "mmsg dispatch viewtoleft",
+        "on-scroll-down": "mmsg dispatch viewtoright"
     },
     "layout": {
         "format": "{}"
@@ -52,12 +52,12 @@
     },
     "clock": {
       "locale": "en_US.UTF-8",
-      "format": "%H:%M %b %d",
+      "format": "%H:%M - %b %d",
       "format-alt": "ㅇㅅㅇ"
     },
-
-        "custom/power": {
+    "custom/power": {
         "format": "",
-        "on-click": "rofi -show mainmenu -config ~/.config/rofi/config-mainmenu.rasi "
+        "on-click": "rofi -show mainmenu -config ~/.config/rofi/config-mainmenu.rasi ",
+        "on-click-right": "foot -F lavat"
     }
 }
