@@ -11,7 +11,7 @@
     
     xremap.url = "github:xremap/nix-flake";
 
-    mangobar.url = "github:mangowm/mangobar";
+    waybar.url = "github:alexays/waybar";
 
     zen-browser = {
       url = "github:youwen5/zen-browser-flake";
