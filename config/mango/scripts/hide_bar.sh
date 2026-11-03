@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-startd=$(pgrep mangobar)
+startd=$(pgrep waybar)
 
 if [ -n "$startd" ]; then
-	systemctl --user stop mangobar
+	systemctl --user stop waybar
 else
-	systemctl --user start mangobar
+	systemctl --user start waybar
 fi

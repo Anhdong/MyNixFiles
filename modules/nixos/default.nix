@@ -4,7 +4,6 @@
   imports = [
     ./boot.nix
     ./audio.nix
-    ./android.nix
     ./graphic.nix
     ./keyboard.nix
     ./xremap.nix

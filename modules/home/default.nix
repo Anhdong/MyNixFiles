@@ -4,7 +4,7 @@
   imports = [
     ./sync_config.nix
     ./desktop.nix
-    ./mangobar.nix
+    ./waybar.nix
     ./rofi.nix
     ./gtk.nix
     ./fonts.nix

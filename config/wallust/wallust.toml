@@ -30,9 +30,9 @@ mango = {
     target = '~/.config/mango/style.conf',
 }
 
-mangobar = {
-    template = 'mangobar/style.css',
-    target = '~/.config/mangobar/style.css',
+waybar = {
+    template = 'waybar/style.css',
+    target = '~/.config/waybar/style.css',
 }
 
 foot = {
@@ -87,6 +87,6 @@ poke = {
 
 [hooks]
 mango = "mmsg dispatch reload_config"
-mangobar = "systemctl --user restart mangobar"
+waybar = "systemctl --user restart waybar"
 mako = "pkill mako"
 

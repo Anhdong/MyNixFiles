@@ -23,7 +23,7 @@
       la = "eza -a";
       lla = "eza -la";
 
-      ff = "fastfetch";
+      ff = "~/.config/fastfetch/ff-poke";
       nv = "nvim";
       y = "yazi";
 
