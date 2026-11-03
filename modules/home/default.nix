@@ -4,6 +4,7 @@
   imports = [
     ./sync_config.nix
     ./desktop.nix
+    ./portal.nix
     ./waybar.nix
     ./rofi.nix
     ./gtk.nix

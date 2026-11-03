@@ -10,13 +10,11 @@
     isNormalUser = true;
     description = "anhdong";
     extraGroups = [ 
-	"networkmanager" 
-	"wheel" 
-	"video" 
-	"render"
-	"storage"
-	];
-    packages = with pkgs; [];
+      "wheel" 
+      "video" 
+      "render"
+      "storage"
+    ];
   };
 
   # Flakes

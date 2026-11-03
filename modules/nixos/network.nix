@@ -1,14 +1,15 @@
 { config, pkgs, ... }:
-
 {
-  networking.hostName = "nixos";
+  networking = {
+    hostName = "nixos";
 
-  # Enable networking
-  networking.networkmanager.enable = false;
-  networking.wireless.iwd.enable = true;
-  networking.dhcpcd.wait = "background"; #dhcpcd wait in background reduce boot time
-  networking.firewall.checkReversePath = false;
+    # Enable networking
+    networkmanager.enable = false;
+    wireless.iwd.enable = true;
+    dhcpcd.wait = "background"; 
+  };
 }
+
 
 
 

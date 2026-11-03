@@ -12,7 +12,7 @@
     ./power.nix
     ./timezone_locale.nix
     ./polkit.nix
-    ./pam.nix
+    ./keyring.nix
     ./compat.nix
     ./display_manager.nix
     ./storage.nix

@@ -18,12 +18,6 @@
     wl-clipboard
     cliphist
 
-    xdg-desktop-portal
-    xdg-desktop-portal-gtk
-    xdg-desktop-portal-wlr
-    gnome-keyring
-    polkit_gnome
-
     swayimg
     mpv
     nautilus
