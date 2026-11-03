@@ -14,6 +14,7 @@
       "video" 
       "render"
       "storage"
+      "networkmanager"
     ];
   };
 

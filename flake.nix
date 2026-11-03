@@ -8,10 +8,13 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    
-    xremap.url = "github:xremap/nix-flake";
 
-    waybar.url = "github:alexays/waybar";
+    noctalia = {
+      url = "github:noctalia-dev/noctalia";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };   
+
+    xremap.url = "github:xremap/nix-flake";
 
     zen-browser = {
       url = "github:youwen5/zen-browser-flake";

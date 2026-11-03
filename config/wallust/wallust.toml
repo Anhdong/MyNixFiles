@@ -3,7 +3,7 @@
 # How the image is parse, in order to get the colors:
 backend = "resized" # full - resized - wal - thumb -  fastresize - kmeans
 # What color space to use to produce and select the most prominent colors:
-color_space = "labmixed" # lab - labmixed - lch - lchmixed - salience
+color_space = "lch" # lab - labmixed - lch - lchmixed - salience
 
 # Use the most prominent colors in a way that makes sense, a scheme color palette:
 # dark - dark16 - darkcomp - darkcomp16
@@ -13,7 +13,7 @@ color_space = "labmixed" # lab - labmixed - lch - lchmixed - salience
 # softlight - softlight16 - softlightcomp - softlightcomp16
 # saliencedark - saliencedarkbalanced - saliencedarkdistributed - saliencedarklow (each has the 16 variations)
 # salienceligh - saliencelightbalanced - saliencelightdistributed - saliencelightlow (each has the 16 variations)
-palette = "saliencedarkbalanced"
+palette = "dark"
 
 check_contrast = true
 
@@ -30,24 +30,14 @@ mango = {
     target = '~/.config/mango/style.conf',
 }
 
-waybar = {
-    template = 'waybar/style.css',
-    target = '~/.config/waybar/style.css',
+noctalia = { 
+    template = 'noctalia/noctalia.json.j2',	
+    target = '~/.config/noctalia/palettes/wallust.json',
 }
 
 foot = {
     template = 'foot/colors.ini',
     target = '~/.config/foot/colors.ini',
-}
-
-rofi = {
-    template = 'rofi/colors.rasi',
-    target = '~/.config/rofi/colors.rasi',
-}
-
-mako = {
-    template = 'mako/config',
-    target = '~/.config/mako/config',
 }
 
 gtk-3 = {
@@ -70,11 +60,6 @@ neopywal = {
     target = '~/.cache/wallust/colors_neopywal.vim',
 }
 
-wlogout = { 
-    template = 'wlogout/style.css',	
-    target = '~/.config/wlogout/style.css',
-}
-
 cava = { 
     template = 'cava/config',	
     target = '~/.config/cava/config',
@@ -85,8 +70,7 @@ poke = {
     target = '~/.cache/wallust/poke.txt',
 }
 
+
 [hooks]
 mango = "mmsg dispatch reload_config"
-waybar = "systemctl --user restart waybar"
-mako = "pkill mako"
-
+noctalia = "noctalia msg config-reload"
