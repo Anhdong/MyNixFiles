@@ -25,34 +25,9 @@ pallete = {
     target = '~/.config/palette.md',
 }
 
-mango = {
-    template = 'mango/style.conf',
-    target = '~/.config/mango/style.conf',
-}
-
 noctalia = { 
     template = 'noctalia/noctalia.json.j2',	
     target = '~/.config/noctalia/palettes/wallust.json',
-}
-
-foot = {
-    template = 'foot/colors.ini',
-    target = '~/.config/foot/colors.ini',
-}
-
-gtk-3 = {
-    template = 'gtk/gtk.css',
-    target = '~/.config/gtk-3.0/gtk.css',
-}
-
-gtk-4 = {
-    template = 'gtk/gtk.css',
-    target = '~/.config/gtk-4.0/gtk.css',
-}
-
-yazi = {
-    template = 'yazi/theme.toml',
-    target = '~/.config/yazi/theme.toml',
 }
 
 neopywal = { 
@@ -60,17 +35,10 @@ neopywal = {
     target = '~/.cache/wallust/colors_neopywal.vim',
 }
 
-cava = { 
-    template = 'cava/config',	
-    target = '~/.config/cava/config',
-}
-
 poke = { 
     template = 'poke/poke.txt',	
     target = '~/.cache/wallust/poke.txt',
 }
 
-
 [hooks]
-mango = "mmsg dispatch reload_config"
 noctalia = "noctalia msg config-reload"

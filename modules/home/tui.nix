@@ -5,9 +5,6 @@
     btop
     yazi
 
-    impala
-    bluetui
-    pulsemixer
     brightnessctl
     playerctl
 
