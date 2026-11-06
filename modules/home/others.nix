@@ -7,5 +7,6 @@
     vesktop
     proton-vpn-cli
     bitwarden-cli
+    lutris-free
   ];
 }

@@ -16,6 +16,4 @@
       }
     });
   '';
-  #A polkit agent
-  security.soteria.enable = true;
 }

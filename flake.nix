@@ -9,6 +9,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    umbriel.url = "github:noctalia-dev/umbriel";
+
     noctalia = {
       url = "github:noctalia-dev/noctalia";
       inputs.nixpkgs.follows = "nixpkgs";

@@ -1,13 +1,16 @@
 { config, pkgs, ... }:
 {
+
   # XWAYLAND
   programs.xwayland.enable = true;
 
-  #AppImage
+  # AppImage
   programs.appimage = {
     enable = true;
     binfmt = true;
   };
+
+  # Dynamically linked libraries
   programs.nix-ld = {
     enable = true;
     libraries = with pkgs; [

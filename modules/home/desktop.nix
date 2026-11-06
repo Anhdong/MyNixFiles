@@ -3,9 +3,9 @@
 
   home.packages = with pkgs; [
 
-    libnotify
     wallust
 
+    brave-origin
     swayimg
     mpv
     nautilus

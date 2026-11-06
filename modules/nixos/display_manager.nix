@@ -1,16 +1,18 @@
-{ pkgs, lib, ... }:
+{ pkgs, lib, inputs, ... }:
 {
   # --- Compositor -------
-  programs.mango.enable = true;
+  imports = [ inputs.umbriel.nixosModules.default ];
+
+  programs.umbriel.enable = true;
 
   # --- UWSM -------------
-  # Generates the "mango-uwsm.desktop" session entry.
+  # Generates sessions entry.
   programs.uwsm = {
     enable = true;
-    waylandCompositors.mango = {
-      prettyName = "Mango";
-      comment = "Mango compositor managed by UWSM";
-      binPath = "/run/current-system/sw/bin/mango";
+    waylandCompositors.umbriel= {
+      prettyName = "Umbriel";
+      comment = "Umbriel compositor managed by UWSM";
+      binPath = "/run/current-system/sw/bin/umbriel";
     };
   };
 
@@ -19,7 +21,7 @@
     enable = true;
     settings.default_session = {
       # On older nixpkgs use pkgs.greetd.tuigreet instead of pkgs.tuigreet.
-      command = "${lib.getExe pkgs.tuigreet} --time --remember --asterisks --greeting 'Welcome back' --cmd 'uwsm start mango-uwsm.desktop'";
+      command = "${lib.getExe pkgs.tuigreet} --time --remember --asterisks --greeting 'Welcome back' --cmd 'uwsm start umbriel.desktop'";
       user = "greeter";
     };
   };
